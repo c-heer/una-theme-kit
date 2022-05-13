@@ -5,14 +5,14 @@
 ---
 
 ### About
-Since 2021 I am constantly developing a CSS-Kit (Framework or whatever the current buzzword) is for my Sites / Apps.
-Una.css is a large CSS reset, which adds minimal styling to standard HTML-Tags and some helper-classes.
+Since 2021 I am constantly developing a CSS-Utility-Theme-Kit (or whatever the current buzzword is) for Sites and Apps.
+This is more of a large CSS reset, which adds minimal styling to standard HTML-Tags and adds some helper-classes for animations.
 The core concept behind `una.css` is the use of CSS-variables to control typography / size / spacing and colors.
 Naming those variables was the most challenging and exhausting part during development.
-Instead of naming css-variables like `primary-color` or `space-medium`.
-I decided to use existing `css-property-names` as `variable-names` and just increase numbers.
-So `--primary-color`, `--color-primary` or `--brand-color` just becomes `--color-1` and so on.
-Everything feels natural and intuitive now. Enjoy!
+Instead of naming css-variables like `primary-color` or `space-medium` which lead to the problem that here no such thing like `--background-medium`.
+I decided to just increase numbers and use `property-names` as `variable-names`.
+So `--primary-color`, `--color-primary` or `--brand-color` just becomes `--color-1`, also stripping things like `background-color` to just `--background-1`.
+This feels more natural when writing `.className { color: var(color-1);}`. Give it a try and Enjoy!
 
 ### Install
 - Install with npm `npm install @heer.dev/una-theme-kit`
