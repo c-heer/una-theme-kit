@@ -1,32 +1,31 @@
 # UNA.CSS
-- Variable Theme-Kit for Sites & Apps
-- Maximum power
-- Tons of glitter
-- Made for unicorns!
+- Theme-Kit for Sites & Apps
+- Maximum power / tons of glitter / made for unicorns
 
 ---
 
 ### About
-Since 2021, I am constantly developing a CSS-Starter Kit for my Sites / Apps called una.css.
-It's not a Framework, it's more a larger CSS reset, which adds minimal styling to standard HTML-Tags.
-The core concept behind `una.css` is different and dead-simple. 
-CSS-variables are used to primarily control typography / size / spacing and colors - nothing more.
-Enjoy!
+Since 2021 I am constantly developing a CSS-Kit (Framework or whatever the current buzzword) is for my Sites / Apps.
+Una.css is a large CSS reset, which adds minimal styling to standard HTML-Tags and some helper-classes.
+The core concept behind `una.css` is the use of CSS-variables to control typography / size / spacing and colors.
+Naming those variables was the most challenging and exhausting part during development.
+Instead of naming css-variables like `primary-color` or `space-medium`.
+I decided to use existing `css-property-names` as `variable-names` and just increase numbers.
+So `--primary-color`, `--color-primary` or `--brand-color` just becomes `--color-1` and so on.
+Everything feels natural and intuitive now. Enjoy!
+
+### Install
+- Install with npm `npm install @heer.dev/una-theme-kit`
+- Download from GitHub https://github.com/c-heer/una-theme-kit
 
 ### Getting Started
-```bash
-npm install @heer.dev/una-theme-kit`
-```
-
-### Import the Base Styles
 ```scss
-// Import base styles from npm Package in your main.scss
+// Put this in your main.scss file
+
+// Import base styles from npm-package
 @import "node_modules/@heer.dev/una.css/scss/base";
-```
 
-### Add Theme-Variables / Theme-Kit
-```scss
-// Global Variables
+// Set global css variables
 :root {
   --min-width: 1280px; // in case we need a center width
   --family-1: 'Helvetica', sans-serif; // define family 1
@@ -39,57 +38,54 @@ npm install @heer.dev/una-theme-kit`
   --line-height-1: 1; // Base line-height / reset
   --line-height-2: 1.7; // standard / p-tag
   --line-height-3: 2.25; // if needed
+  // Even in Flexible Layouts a fixed height is awesome!
   --height-1: 50px; // use for buttons / inputs / small toolbars
   --height-2: 70px; // use for regular toolbars / bigger buttons 
   --height-3: 100px; // if needed
+  // Global Spacing makes it easy to adjust Layouts
   --space-1: .5rem; // standard space
   --space-2: 1rem; // bigger space
   --space-3: 10vh; // vertical large space / used as a separator for example between  <sections>
 }
 
-// Typography Extra 
-// Set class on body to increase font sizes to medium
+// Alternat Font-sizes / class must be set on body!
 .typo-medium {
   --font-size-1: max(.9rem, .55vw);
   --font-size-2: max(1.1rem, .63vw);
   --font-size-3: max(1.3rem, .75vw);
 }
-// Set class on body to increase font sizes to medium
 .typo-large {
   --font-size-1: max(1.05rem, .7vw);
   --font-size-2: max(1.3rem, .85vw);
   --font-size-3: max(1.5rem, 1.05vw);
 }
 
-// Theme Variables
-// !Important `class="dark"` or `class="light"' MUST be set on body tag!
-.dark {
-  --color-1: hsl(231, 48%, 32%);
-  --color-2: inherit;
-  --color-3: inherit;
-  --on-color: rgba(232, 233, 236, 1);
-  --background-1: rgba(14, 20, 27, 1);
-  --background-2: rgba(9, 16, 21, 1);
-  --background-3: rgb(58, 64, 81, 1);
-  --on-background: rgba(161, 165, 182, 1);
-  --border: rgba(44, 47, 66, 1);
-  --error: hsl(346, 48%, 46%);
-  --warning: hsl(52, 50%, 47%);
-  --success: hsl(141, 50%, 47%);
-}
+// Theme Variables / !Important `class="dark"` or `class="light"' MUST be set on body tag!
 .light {
-  --color-1: hsl(231, 48%, 32%);
+  --color-1: hsl(175, 100%, 32%);
   --color-2: inherit;
   --color-3: inherit;
-  --on-color: rgba(239, 241, 245, 1);
-  --background-1: rgba(245, 245, 245, 1);
-  --background-2: rgba(255, 255, 255, 1);
-  --background-3: rgba(190, 190, 190, 1);
-  --on-background: rgba(70, 71, 78, 1);
-  --border: rgba(205, 205, 205, 1);
-  --error: hsl(346, 48%, 46%);
-  --warning: hsl(52, 50%, 47%);
-  --success: hsl(141, 50%, 47%);
+  --on-color: hsl(0, 0%, 10%);
+  --background-1: hsl(0, 0%, 90%);
+  --background-2: hsl(0, 0%, 95%);
+  --background-3: hsl(0, 0%, 93%);
+  --on-background: hsl(0, 0%, 35%);
+  --border: hsl(0, 0%, 85%);
+  --error: #c42600;
+  --warning: #d38f00;
+  --success: #009600;
+}
+.dark {
+  --color-1: hsl(175, 100%, 32%);
+  --color-2: inherit;
+  --color-3: inherit;
+  --background-2: hsl(0, 0%, 7%);
+  --background-3: hsl(0, 0%, 20%);
+  --on-background: hsl(0, 0%, 80%);
+  --border: hsl(0, 0%, 17%);
+  --error: #c42600;
+  --warning: #d38f00;
+  --success: #009600;
 }
 
 // Media queries / if needed
@@ -97,26 +93,25 @@ npm install @heer.dev/una-theme-kit`
 @media (min-width: 1180px) {} // Laptops
 @media screen and (min-width: 2561px) {} // 4k
 
-// Put all your custom global CSS styles below...
+// -------------------------------------------------------
+// Put all your custom global CSS styles below this
+// -------------------------------------------------------
 ```
 
 ### Build in CSS Animation Classes
+```html
+<div class="fadeIn"></div>
+<div class="dropInRight"></div>
+<div class="dropInLeft"></div>
+<div class="dropInTop"></div>
+<div class="dropInBottom"></div>
+```
 ```scss
-.fadeIn,
-.dropInRight,
-.dropInLeft,
-.dropInTop,
-.dropInBottom {
-  // set one of the classnames on any html element makes it dropIn via css @keyframes
-}
-
 .motion-off {
   // set class .motion-off on body to completely turn off Animations / Transitions
 }
 ```
 
 ### Done
-- If anyone ever finds this repo / package and uses it
-- Feel free to drop me a line at ilikeuna@heer.dev and tell me what you think.
 - Thanks for reading!
-- c.heer
+- heer.dev
