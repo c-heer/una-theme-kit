@@ -25,7 +25,7 @@ It's as easy as 1,2,3 - give it a try and tell me what you think.
 // Put this in your main.scss file
 
 // Import base styles from npm-package
-@import "node_modules/@heer.dev/una.css/scss/base";
+@import "node_modules/@heer.dev/una-theme-kit/dist/scss/base";
 
 // Set global css variables
 :root {
