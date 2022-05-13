@@ -1,9 +1,9 @@
 {
-  "name": "@heer.dev/una-css-theme-kit",
+  "name": "@heer.dev/una-theme-kit",
   "version": "0.0.1",
-  "description": "una.css - variable theme kit for sites & apps / maximum power / tons of glitter / made for unicorns!",
+  "description": "UNA THEME KIT - A SCSS Theme-Kit for sites & apps / maximum power / tons of glitter / made for unicorns!",
   "license": "MIT",
-  "repository": "c-heer/una-css-theme-kit",
+  "repository": "c-heer/una-theme-kit",
   "keywords": [
     "css",
     "scss",
