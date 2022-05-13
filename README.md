@@ -1,5 +1,5 @@
-# UNA.CSS
-- Theme-Kit for Sites & Apps
+# UNA THEME KIT
+- Theme-Kit for Sites & Apps written in SCSS
 - Maximum power / tons of glitter / made for unicorns
 
 ---
