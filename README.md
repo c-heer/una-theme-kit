@@ -1,4 +1,4 @@
-# UNA THEME KIT
+# UNA CSS Theming-Kit
 - Theme-Kit for Sites & Apps written in SCSS
 - Maximum power / tons of glitter / made for unicorns
 
@@ -48,7 +48,7 @@ This feels more natural when writing `.className { color: var(color-1);}`. Give 
   --space-3: 10vh; // vertical large space / used as a separator for example between  <sections>
 }
 
-// Alternat Font-sizes / class must be set on body!
+// Alternate Font-sizes / set class on body / use js to toggle between sizes by adding / removing class
 .typo-medium {
   --font-size-1: max(.9rem, .55vw);
   --font-size-2: max(1.1rem, .63vw);
@@ -60,7 +60,7 @@ This feels more natural when writing `.className { color: var(color-1);}`. Give 
   --font-size-3: max(1.5rem, 1.05vw);
 }
 
-// Theme Variables / !Important `class="dark"` or `class="light"' MUST be set on body tag!
+// Theme Variables / !Important `class="dark"` or `class="light"' MUST be set on body tag! / use js to toggle between themes by adding / removing class
 .light {
   --color-1: hsl(175, 100%, 32%);
   --color-2: inherit;
@@ -118,13 +118,27 @@ This feels more natural when writing `.className { color: var(color-1);}`. Give 
 </body>
 ```
 
-### CSS Animation Classes / Helper
+### CSS Animation / Transition
 ```html
+<!-- use classNames on HTML-Tags-->
 <div class="fadeIn"></div>
 <div class="dropInRight"></div>
 <div class="dropInLeft"></div>
 <div class="dropInTop"></div>
 <div class="dropInBottom"></div>
+```
+```scss
+:root { // predefined timings for animations / transitions
+  --transition-fast: .3s ease-in-out;
+  --transition-slow: .6s ease-in-out;
+  --animation-fast: .3s ease-in-out forwards;
+  --animation-slow: .9s ease-in-out forwards;
+  --animation-fast-infinite: .3s ease-in-out 0s infinite;
+  --animation-slow-infinite: .6s ease-in-out 0s infinite;
+}
+.myClass {
+  animation: myAnimation var(--animation-fast);
+}
 ```
 ```scss
 .motion-off {
