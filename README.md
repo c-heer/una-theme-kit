@@ -5,14 +5,16 @@
 ---
 
 ### About
-Since 2021 I am constantly developing a CSS-Utility-Theme-Kit (or whatever the current buzzword is) for Sites and Apps.
-But this is more of a large CSS reset, which adds minimal styling to standard HTML-Tags and adds some helper-classes for animations.
-The core concept behind `una.css` is the use of CSS-variables to control typography / size / spacing and colors.
-Naming those variables was the most challenging and exhausting part during development.
-Instead of naming css-variables like `primary-color` or `space-medium` which lead to the problem that there is no such thing like `--background-medium`.
-I decided to just increase numbers and use `property-names` as `variable-names`.
-So `--primary-color`, `--color-primary` or `--brand-color` just becomes `--color-1`, also stripping things like `background-color` to just `--background-1`.
-This feels more natural when writing `.className { color: var(color-1);}`. Give it a try, enjoy!
+Since 2015 I am constantly developing a CSS-Kind-of-Framework for Sites and Apps. 
+Meaning for years I copied my best practices in CSS from Project to Project.
+First part of Una.css is a large CSS reset which is bundled in base.scss.
+It adds minimal styling to standard HTML-Tags and comes with some helper-classes for animations.
+The second part is the use of CSS-variables for theming, which only controls typography / size / spacing and color.
+Naming those things, in this case variables, was always the most challenging part.
+So instead of naming them like `primary-color` or `space-medium`, I decided to just increase numbers and use `variable-names` related to `property-names`.
+So `--primary-color`, `--color-primary` or `--brand-color` just becomes `--color-1`.
+After half a year using the Theme-Kit it feels natural when writing `.className { color: var(color-1);}`.
+It's as easy as 1,2,3 - give it a try and tell me what you think.
 
 ### Install
 - Install with npm `npm install @heer.dev/una-theme-kit`
