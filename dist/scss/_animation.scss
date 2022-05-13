@@ -1,0 +1,118 @@
+// Timings
+:root {
+  --transition-fast: .3s ease-in-out;
+  --transition-slow: .6s ease-in-out;
+  --animation-fast: .3s ease-in-out forwards;
+  --animation-slow: .9s ease-in-out forwards;
+  --animation-fast-infinite: .3s ease-in-out 0s infinite;
+  --animation-slow-infinite: .6s ease-in-out 0s infinite;
+}
+
+// Fade in
+@keyframes fadeIn {
+  from  {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  opacity: 0;
+  will-change: tranform;
+  animation: fadeIn var(--animation-fast);
+}
+
+// Drop in from Right
+@keyframes dropInRight {
+  from  {
+    opacity: 0;
+    transform: translateX(.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.dropInRight {
+  opacity: 0;
+  will-change: tranform;
+  animation: dropInRight var(--animation-fast);
+}
+
+// Drop in from Left
+@keyframes dropInLeft {
+  from  {
+    opacity: 0;
+    transform: translateX(-.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.dropInLeft {
+  opacity: 0;
+  will-change: tranform;
+  animation: dropInLeft var(--animation-fast);
+}
+
+// Drop in from Top
+@keyframes dropInTop {
+  from  {
+    opacity: 0;
+    transform: translateY(-.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.dropInTop {
+  opacity: 0;
+  will-change: tranform;
+  animation: dropInTop var(--animation-fast);
+}
+
+// Drop in from Bottom
+@keyframes dropInBottom {
+  from  {
+    opacity: 0;
+    transform: translateY(.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.dropInBottom {
+  opacity: 0;
+  will-change: tranform;
+  animation: dropInBottom var(--animation-fast);
+}
+
+// Delay Chain
+.fadeIn,
+.dropInRight,
+.dropInLeft,
+.dropInTop,
+.dropInBottom {
+  opacity: 0;
+  &:nth-child(2) {animation-delay: .05s;}
+  &:nth-child(3) {animation-delay: .1s;}
+  &:nth-child(4) {animation-delay: .15s;}
+  &:nth-child(5) {animation-delay: .2s;}
+  &:nth-child(6) {animation-delay: .25s;}
+  &:nth-child(7) {animation-delay: .30s;}
+  &:nth-child(8) {animation-delay: .35s;}
+  &:nth-child(9) {animation-delay: .4s;}
+  &:nth-child(10) {animation-delay: .45s;}
+}
+
+.motion-off *,
+.motion-off *::before,
+.motion-off *::after {
+  animation: none !important;
+  transition: none !important;
+  opacity: 1 !important;
+}

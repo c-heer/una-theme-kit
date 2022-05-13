@@ -1,0 +1,8 @@
+// Import theme base styles
+@import '_reset';
+@import '_typography';
+@import '_animation';
+@import '_form';
+
+// Import base styles from npm Package
+@import "node_modules/@heer.dev/una.css/scss/base";
