@@ -98,7 +98,27 @@ This feels more natural when writing `.className { color: var(color-1);}`. Give 
 // -------------------------------------------------------
 ```
 
-### Build in CSS Animation Classes
+### Test some Standard-HTML and Variables 
+```html
+<body class="dark">
+    <h1>Headline 1</h1>
+    <h2>Headline 2</h2>
+    <p>
+        Some paragraph content
+    </p>
+    <ul>
+      <li>liste-item 1</li>
+      <li>list-item-2</li>
+      <li>list-item-3</li>
+    </ul>
+    <div style="color: var(--color-1); background: var(--background-2); font-size: var(--font-size-4);)">
+        A div with background-color-2 and text with color-1 and massive font-size <br>
+        Resize your browser to see what happens.
+    </div>
+</body>
+```
+
+### CSS Animation Classes / Helper
 ```html
 <div class="fadeIn"></div>
 <div class="dropInRight"></div>
