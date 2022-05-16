@@ -93,11 +93,11 @@
 
 // Delay Chain
 @for $i from 1 through 30 {
-  .fadeIn,
-  .dropInRight,
-  .dropInLeft,
-  .dropInTop,
-  .dropInBottom:nth-child(#{$i}n) {
+  .fadeIn:nth-child(#{$i}),
+  .dropInRight:nth-child(#{$i}),
+  .dropInLeft:nth-child(#{$i}),
+  .dropInTop:nth-child(#{$i}),
+  .dropInBottom:nth-child(#{$i}) {
     animation-delay: #{$i * 0.05}s;
   }
 }
