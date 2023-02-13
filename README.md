@@ -14,9 +14,16 @@ Naming those things, in this case variables, was always the most challenging par
 So instead of naming them like `primary-color` or `space-medium`, I decided to just increase numbers and use `variable-names` related to `property-names`.
 So `--primary-color`, `--color-primary` or `--brand-color` just becomes `--color-1`.
 After half a year using the Theme-Kit it feels natural when writing `.className { color: var(color-1);}`.
-It's as easy as 1,2,3 - give it a try and tell me what you think.
+It's as easy as one, two, three - give it a try and tell me what you think.
 
-### Install
+### Update Info
+- Version 0.0.14
+  - Add margin to ul
+  - change min-width to name max-width
+  - add scrollbar styles
+  - add css style scrollbar-gutter: stable; to html
+
+### How to Install
 - Install with npm `npm install @heer.dev/una-theme-kit`
 - Download from GitHub https://github.com/c-heer/una-theme-kit
 
@@ -29,7 +36,7 @@ It's as easy as 1,2,3 - give it a try and tell me what you think.
 
 // Set global css variables
 :root {
-  --min-width: 1280px; // in case we need a center width
+  --max-width: 1280px; // in case we need a center width
   --family-1: 'Helvetica', sans-serif; // define family 1
   --family-2: 'Helvetica', sans-serif; // define family 2
   // Some CSS3 Magic stuff to calculate font-sizes based on screen-size
@@ -76,6 +83,8 @@ It's as easy as 1,2,3 - give it a try and tell me what you think.
   --error: #c42600;
   --warning: #d38f00;
   --success: #009600;
+  --scrollbar-track: hsl(216, 16%, 94%);
+  --scrollbar-thumb: hsl(232, 12%, 70%);
 }
 .dark {
   --color-1: hsl(175, 100%, 32%);
@@ -88,6 +97,8 @@ It's as easy as 1,2,3 - give it a try and tell me what you think.
   --error: #c42600;
   --warning: #d38f00;
   --success: #009600;
+  --scrollbar-track: hsl(216, 16%, 6%);
+  --scrollbar-thumb: hsl(232, 12%, 30%);
 }
 
 // Media queries / if needed
@@ -98,6 +109,15 @@ It's as easy as 1,2,3 - give it a try and tell me what you think.
 // -------------------------------------------------------
 // Put all your custom global CSS styles below this
 // -------------------------------------------------------
+```
+
+### Use the Holy Grid Starter
+```html
+<div class="holy-grid">
+  <header></header>
+  <main></main>
+  <footer></footer>
+</div>
 ```
 
 ### Test some Standard-HTML and Variables 

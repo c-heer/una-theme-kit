@@ -1,6 +1,6 @@
 .holy-grid {
   display: grid;
-  --center-width: min(calc(100% - (var(--space-2) * 2)), var(--min-width)); // calculate center width base in spacing and min width
+  --center-width: min(calc(100% - (var(--space-2) * 2)), var(--max-width)); // calculate center width base in spacing and min width
   grid-template-columns: auto var(--center-width) auto;
   grid-template-rows: auto 1fr auto;
   gap: 0;
