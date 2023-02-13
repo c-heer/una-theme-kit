@@ -5,13 +5,12 @@
   margin: 0;
 }
 html {
-  height: 100%; // dont change! Scroll Bug / IOS height Bug / never set overflowY on html!
+  height: 100%; // dont change! Scroll Bug / IOS height Bug
   background: var(--background-1);
-  scrollbar-gutter: stable; // remove layout shift when scrollbars visible / invisible
 }
 body {
   height: 100%; // dont change! Scroll Bug / IOS height Bug
-  overflow-y: auto; // Must have that scroll position works proper / scrollTop() / sticky
+  overflow-y: auto; // Must have that scroll position works proper / scrollTop()
   overflow-x: hidden; // saver
   background: var(--background-1);
 }
