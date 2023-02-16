@@ -17,6 +17,8 @@ After half a year using the Theme-Kit it feels natural when writing `.className 
 It's as easy as one, two, three - give it a try and tell me what you think.
 
 ### Update Info
+- Version 0.0.16
+  - Move ul to reset.scss
 - Version 0.0.15
   - Add margin to ul
   - change min-width to name max-width
