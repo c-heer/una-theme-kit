@@ -89,9 +89,11 @@ It's as easy as one, two, three - give it a try and tell me what you think.
   --scrollbar-thumb: hsl(232, 12%, 70%);
 }
 .dark {
-  --color-1: hsl(175, 100%, 32%);
+  --color-1: hsl(200, 100%, 25%);
   --color-2: inherit;
   --color-3: inherit;
+  --on-color: hsl(0, 0%, 90%);
+  --background-1: hsl(0, 0%, 10%);
   --background-2: hsl(0, 0%, 7%);
   --background-3: hsl(0, 0%, 20%);
   --on-background: hsl(0, 0%, 80%);
