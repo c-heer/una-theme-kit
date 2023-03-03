@@ -11,7 +11,7 @@ html {
 }
 body {
   height: 100%; // dont change! Scroll Bug / IOS height Bug
-  overflow-y: auto; // Must have that scroll position works proper / scrollTop()
+  overflow-y: auto; // keep overflow auto so scroll position works proper / scrollTop()
   overflow-x: hidden; // saver
   background: var(--background-1);
 }
@@ -21,9 +21,6 @@ img, picture, video, canvas, svg {
 }
 input, button, textarea, select {
   font: inherit;
-}
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
 }
 #root, #__next {
   isolation: isolate;

@@ -1,39 +1,27 @@
-/*
-  TYPOGRAPHY
-  - Font Sizes
-  - Font Weights
-  - Font Colors
-  - Line Heights
-*/
-
 body {
   font-family: var(--family-1);
   font-size: var(--font-size-2);
   line-height: var(--line-height-1);
   font-weight: 500;
   color: var(--on-background);
+  cursor: crosshair;
 }
-
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   font-size: var(--font-size-3);
 }
-
 b, strong {
   font-weight: bold;
 }
-
 a,
 a:hover,
 a:active {
   color: var(--on-background);
   text-decoration: underline;
 }
-
 a:hover {
   color: var(--color-1);
 }
-
 p {
   line-height: var(--line-height-2);
 }

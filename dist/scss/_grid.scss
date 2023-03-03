@@ -13,9 +13,13 @@
   min-height: 100%; // keeps footer at bottom / leave % vor ios bug / vh not working
   header {
     grid-area: header;
-    &::before {grid-area:left;}
+    &::before {
+      grid-area:left;
+    }
   }
-  main {grid-area: main;}
+  main {
+    grid-area: main;
+  }
   footer {
     grid-area: footer;
     &::after {

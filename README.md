@@ -9,6 +9,9 @@ Una-CSS Theme-Kit is a lightweight SCSS starter with the most used Styles based 
 It ships styles for Typography, Forms, Animations and includes a Reset.
 To keep things simple most Variables are named after the property-value name.
 Once you get used to it, it's as easy as 1,2,3. Enjoy!
+
+### Version 1.0.4
+- add compiled / minified CSS Versions
  
 ### Version 1.0.3
 - update readme.md
@@ -22,7 +25,7 @@ Once you get used to it, it's as easy as 1,2,3. Enjoy!
 
 ### How to Install
 - Install with npm `npm install @heer.dev/una-theme-kit`
-- Download from GitHub https://github.com/c-heer/una-theme-kit
+- Or download from GitHub https://github.com/c-heer/una-theme-kit
 
 ### Getting Started
 ```scss
