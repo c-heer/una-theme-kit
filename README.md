@@ -133,7 +133,7 @@ Once you get used to it, it's as easy as 1,2,3. Enjoy!
         Some paragraph content
     </p>
     <ul>
-      <li>liste-item 1</li>
+      <li>list-item-1</li>
       <li>list-item-2</li>
       <li>list-item-3</li>
     </ul>
