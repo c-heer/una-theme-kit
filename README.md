@@ -10,6 +10,9 @@ It ships styles for Typography, Forms, Animations and includes a Reset.
 To keep things simple most Variables are named after the property-value name.
 Once you get used to it, it's as easy as 1,2,3. Enjoy!
 
+### Version 1.0.5
+- bugfix typo
+
 ### Version 1.0.4
 - add compiled / minified CSS Versions
  
