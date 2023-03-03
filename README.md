@@ -1,4 +1,4 @@
-# UNA CSS Theming-Kit
+# UNA Theme-Kit
 - Theme-Kit for Sites & Apps written in SCSS
 - Maximum power / tons of glitter / made for unicorns
 
@@ -8,16 +8,17 @@
 Una-CSS Theme-Kit is a lightweight SCSS starter with the most used Styles based on CSS-Variables.
 It ships styles for Typography, Forms, Animations and includes a Reset.
 To keep things simple most Variables are named after the property-value name.
-Once you get used to it it is as easy as 1,2,3. Enjoy!
+Once you get used to it, it's as easy as 1,2,3. Enjoy!
+ 
+### Version 1.0.3
+- update readme.md
+- move ul-styles to reset.scss and add initial padding
+- change min-width to name max-width
+- add scrollbar styles and variable names
+- add css style `scrollbar-gutter: stable;` to reset
 
-### Update Info
-- Version 0.0.16
-  - Move ul to reset.scss
-- Version 0.0.15
-  - Add margin to ul
-  - change min-width to name max-width
-  - add scrollbar styles
-  - add css style scrollbar-gutter: stable; to html
+### Version 0.0.1 - 1.0.2
+- developing / refactoring / bugfixing
 
 ### How to Install
 - Install with npm `npm install @heer.dev/una-theme-kit`
@@ -27,15 +28,15 @@ Once you get used to it it is as easy as 1,2,3. Enjoy!
 ```scss
 // Put this in your main.scss file
 
-// Import base styles from npm-package
+// import base styles from npm-package
 @import "node_modules/@heer.dev/una-theme-kit/dist/scss/base";
 
-// Set global css variables
+// set global css variables
 :root {
   --max-width: 1280px; // in case we need a center width
   --family-1: 'Helvetica', sans-serif; // define family 1
   --family-2: 'Helvetica', sans-serif; // define family 2
-  // Some CSS3 Magic stuff to calculate font-sizes based on screen-size
+  // some CSS3 magic stuff to calculate font-sizes based on screen-size
   --font-size-1: max(.8rem, .45vw); // caption / footer / etc
   --font-size-2: max(.95rem, .55vw); // base font size used on body
   --font-size-3: max(1.1rem, .65vw); // headline base
@@ -43,17 +44,17 @@ Once you get used to it it is as easy as 1,2,3. Enjoy!
   --line-height-1: 1; // Base line-height / reset
   --line-height-2: 1.7; // standard / p-tag
   --line-height-3: 2.25; // if needed
-  // Even in Flexible Layouts a fixed height is awesome!
+  // in case you need fixed heights
   --height-1: 50px; // use for buttons / inputs / small toolbars
   --height-2: 70px; // use for regular toolbars / bigger buttons 
   --height-3: 100px; // if needed
-  // Global Spacing makes it easy to adjust Layouts
+  // global spacing makes it easy to adjust layouts
   --space-1: .5rem; // standard space
   --space-2: 1rem; // bigger space
   --space-3: 10vh; // vertical large space / used as a separator for example between  <sections>
 }
 
-// Alternate Font-sizes / set class on body / use js to toggle between sizes by adding / removing class
+// alternate Font-sizes / set class on body / use js to toggle between sizes by adding / removing class
 .typo-medium {
   --font-size-1: max(.9rem, .55vw);
   --font-size-2: max(1.1rem, .63vw);
@@ -65,7 +66,9 @@ Once you get used to it it is as easy as 1,2,3. Enjoy!
   --font-size-3: max(1.5rem, 1.05vw);
 }
 
-// Theme Variables / !Important `class="dark"` or `class="light"' MUST be set on body tag! / use js to toggle between themes by adding / removing class
+// Theme Variables
+// !Important `class="dark"` or `class="light"' MUST be set on body tag!
+// use js to toggle between themes by adding / removing class
 .light {
   --color-1: hsl(175, 100%, 32%);
   --color-2: inherit;
@@ -101,15 +104,15 @@ Once you get used to it it is as easy as 1,2,3. Enjoy!
 
 // Media queries / if needed
 @media screen and (min-width: 768px) {} // Tablets
-@media (min-width: 1180px) {} // Laptops
+@media screen and (min-width: 1180px) {} // Laptops
 @media screen and (min-width: 2561px) {} // 4k
 
 // -------------------------------------------------------
-// Put all your custom global CSS styles below this
+// Put all your custom global CSS styles below this line
 // -------------------------------------------------------
 ```
 
-### Use the Holy Grid Starter
+### use the holy-grid starter
 ```html
 <div class="holy-grid">
   <header></header>
@@ -118,7 +121,7 @@ Once you get used to it it is as easy as 1,2,3. Enjoy!
 </div>
 ```
 
-### Test some Standard-HTML and Variables 
+### test some standard HTML and variables 
 ```html
 <body class="dark">
     <h1>Headline 1</h1>
@@ -138,7 +141,7 @@ Once you get used to it it is as easy as 1,2,3. Enjoy!
 </body>
 ```
 
-### CSS Animation / Transition
+### animation and transition classes
 ```html
 <!-- use classNames on HTML-Tags-->
 <div class="fadeIn"></div>
