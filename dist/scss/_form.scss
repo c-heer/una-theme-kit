@@ -2,16 +2,13 @@ label {
   font-size: var(--font-size-2);
   opacity: 0.5;
 }
-
 *::placeholder {
   font-size: var(--font-size-2);
   opacity: .7;
 }
-
 *:focus::placeholder {
   opacity: .3;
 }
-
 input {
   appearance: none;
   background-color: var(--background-3);
@@ -29,12 +26,10 @@ input {
   border: 1px solid var(--background-2);
   transition: var(--transition-fast);
 }
-
 input:required,
 input:invalid {
   box-shadow: none;
 }
-
 input[type='submit'],
 input[type='reset'],
 input[type='button'],
@@ -42,18 +37,15 @@ input[type='number'],
 input[type='file'] {
   width: auto;
 }
-
 input[type='radio'],
 input[type='checkbox'] {
   padding: 0;
 }
-
 input[type="checkbox"] {
   position: relative;
   width: calc(var(--height-1) / 1.5);
   height: calc(var(--height-1) / 1.5);
 }
-
 input[type="checkbox"]::after {
   content: '+';
   position: absolute;
@@ -65,27 +57,22 @@ input[type="checkbox"]::after {
   top: 0;
   font-size: var(--font-size-3);
 }
-
 input[type="checkbox"]:checked {
   background: var(--on-background);
   color: var(--background-1);
 }
-
 input[type="checkbox"]:checked::after {
   content: '\2713';
 }
-
 input[type="checkbox"]:disabled {
   cursor: not-allowed;
 }
-
 input[type="radio"] {
   position: relative;
   width: calc(var(--height-1) / 1.5);
   height: calc(var(--height-1) / 1.5);
   border-radius: 50%;
 }
-
 input[type="radio"]::after {
   content: '0';
   position: absolute;
@@ -101,19 +88,15 @@ input[type="radio"]::after {
   transform: scale(0);
   transition: var(--transition-fast);
 }
-
 input[type="radio"]:checked {
   background: var(--background-3);
 }
-
 input[type="radio"]:checked::after {
   transform: scale(.5);
 }
-
 input[type="radio"]:disabled {
   cursor: not-allowed;
 }
-
 input[type='file'] {
   position: relative;
   display: grid;
@@ -132,7 +115,6 @@ input[type='file']::-webkit-file-upload-button {
   visibility: hidden;
   display: none;
 }
-
 select {
   appearance: none;
   box-sizing: border-box;
@@ -166,8 +148,6 @@ select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #000;
 }
-
-
 textarea {
   appearance: none;
   background-color: var(--background-3);
@@ -184,7 +164,6 @@ textarea {
   color: var(--on-background);
   border: 1px solid var(--background-2);
 }
-
 textarea:required,
 textarea:invalid {
   box-shadow: none;

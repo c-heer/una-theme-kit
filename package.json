@@ -1,6 +1,6 @@
 {
   "name": "@heer.dev/una-theme-kit",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "UNA THEME KIT - A SCSS Theme-Kit for sites & apps / maximum power / tons of glitter / made for unicorns!",
   "license": "MIT",
   "repository": "c-heer/una-theme-kit",
@@ -8,6 +8,10 @@
     "css",
     "scss",
     "minimal",
-    "theme"
+    "theme",
+    "css framework",
+    "Frontend Theme Kit",
+    "Leightweight",
+    "Utility Based"
   ]
 }

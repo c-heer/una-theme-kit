@@ -7,8 +7,6 @@
   --animation-fast-infinite: .3s ease-in-out 0s infinite;
   --animation-slow-infinite: .6s ease-in-out 0s infinite;
 }
-
-// Fade in
 @keyframes fadeIn {
   from  {
     opacity: 0;
@@ -22,8 +20,6 @@
   will-change: tranform;
   animation: fadeIn var(--animation-fast);
 }
-
-// Drop in from Right
 @keyframes dropInRight {
   from  {
     opacity: 0;
@@ -39,8 +35,6 @@
   will-change: tranform;
   animation: dropInRight var(--animation-fast);
 }
-
-// Drop in from Left
 @keyframes dropInLeft {
   from  {
     opacity: 0;
@@ -56,8 +50,6 @@
   will-change: tranform;
   animation: dropInLeft var(--animation-fast);
 }
-
-// Drop in from Top
 @keyframes dropInTop {
   from  {
     opacity: 0;
@@ -73,8 +65,6 @@
   will-change: tranform;
   animation: dropInTop var(--animation-fast);
 }
-
-// Drop in from Bottom
 @keyframes dropInBottom {
   from  {
     opacity: 0;
@@ -90,8 +80,6 @@
   will-change: tranform;
   animation: dropInBottom var(--animation-fast);
 }
-
-// Delay Chain
 @for $i from 1 through 30 {
   .fadeIn:nth-child(#{$i}),
   .dropInRight:nth-child(#{$i}),
@@ -101,7 +89,6 @@
     animation-delay: #{$i * 0.05}s;
   }
 }
-
 .motion-off *,
 .motion-off *::before,
 .motion-off *::after {
@@ -109,7 +96,6 @@
   transition: none !important;
   opacity: 1 !important;
 }
-
 @media screen and (prefers-reduced-motion: reduce) {
   .fadeIn,
   .dropInRight,

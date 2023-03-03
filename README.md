@@ -5,16 +5,10 @@
 ---
 
 ### About
-Since 2015 I am constantly developing a CSS-Kind-of-Framework for Sites and Apps. 
-Meaning for years I copied my best practices in CSS from Project to Project.
-First part of Una.css is a large CSS reset which is bundled in base.scss.
-It adds minimal styling to standard HTML-Tags and comes with some helper-classes for animations.
-The second part is the use of CSS-variables for theming, which only controls typography / size / spacing and color.
-Naming those things, in this case variables, was always the most challenging part.
-So instead of naming them like `primary-color` or `space-medium`, I decided to just increase numbers and use `variable-names` related to `property-names`.
-So `--primary-color`, `--color-primary` or `--brand-color` just becomes `--color-1`.
-After half a year using the Theme-Kit it feels natural when writing `.className { color: var(color-1);}`.
-It's as easy as one, two, three - give it a try and tell me what you think.
+Una-CSS Theme-Kit is a lightweight SCSS starter with the most used Styles based on CSS-Variables.
+It ships styles for Typography, Forms, Animations and includes a Reset.
+To keep things simple most Variables are named after the property-value name.
+Once you get used to it it is as easy as 1,2,3. Enjoy!
 
 ### Update Info
 - Version 0.0.16

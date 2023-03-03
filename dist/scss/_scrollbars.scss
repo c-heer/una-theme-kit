@@ -4,11 +4,11 @@
   padding: 2rem;
 }
 
-body::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background: var(--scrollbar-track);
 }
 
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background-color: var(--scrollbar-thumb);
   border: .45rem solid var(--scrollbar-track);
 }
