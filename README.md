@@ -10,6 +10,12 @@ It ships styles for Typography, Forms, Animations and includes a Reset.
 To keep things simple most Variables are named after the property-value name.
 Once you get used to it, it's as easy as 1,2,3. Enjoy!
 
+### Version 1.0.7
+- add css style `*{scrollbar-width: thin;}` for Firefox thin scrollbars
+
+### Version 1.0.6
+- update readme.md
+
 ### Version 1.0.5
 - bugfix typo
 

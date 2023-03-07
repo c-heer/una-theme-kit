@@ -97,6 +97,10 @@ p {
   line-height: var(--line-height-2);
 }
 
+* {
+  scrollbar-width: thin;
+}
+
 ::-webkit-scrollbar {
   width: 1rem;
   height: 1rem;
