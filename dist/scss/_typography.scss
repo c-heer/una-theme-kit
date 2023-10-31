@@ -12,6 +12,10 @@ h1, h2, h3, h4, h5, h6 {
 b, strong {
   font-weight: bold;
 }
+a {
+  color: var(--on-background);
+  text-decoration: underline;
+}
 p {
   line-height: var(--line-height-2);
 }
