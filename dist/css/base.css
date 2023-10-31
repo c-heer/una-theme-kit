@@ -82,9 +82,15 @@ b, strong {
   font-weight: bold;
 }
 
-a {
+a,
+a:hover,
+a:active {
   color: var(--on-background);
   text-decoration: underline;
+}
+
+a:hover {
+  color: var(--color-1);
 }
 
 p {

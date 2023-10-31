@@ -12,9 +12,14 @@ h1, h2, h3, h4, h5, h6 {
 b, strong {
   font-weight: bold;
 }
-a {
+a,
+a:hover,
+a:active {
   color: var(--on-background);
   text-decoration: underline;
+}
+a:hover {
+  color: var(--color-1);
 }
 p {
   line-height: var(--line-height-2);
