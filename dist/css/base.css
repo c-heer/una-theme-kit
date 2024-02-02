@@ -70,11 +70,6 @@ p {
   line-height: var(--line-height-2);
 }
 
-* {
-  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
-  scrollbar-width: thin;
-}
-
 ::-webkit-scrollbar {
   width: 1rem;
   height: 1rem;
@@ -97,6 +92,11 @@ code::-webkit-scrollbar-track {
 code::-webkit-scrollbar-thumb {
   background-color: var(--border);
   border: 0.45rem solid var(--background-1);
+}
+
+* {
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  scrollbar-width: thin;
 }
 
 :root {
