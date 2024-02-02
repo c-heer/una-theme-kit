@@ -10,6 +10,10 @@ It ships styles for Typography, Forms, Animations and includes a Reset.
 To keep things simple most Variables are named after the property-value name.
 Once you get used to it, it's as easy as 1,2,3. Enjoy!
 
+### Version 1.0.12
+- remove basic grid-layout
+- add scrollbar styles for Firefox back again
+
 ### Version 1.0.11
 - bugfix scrollbar styling
 
@@ -128,15 +132,6 @@ Once you get used to it, it's as easy as 1,2,3. Enjoy!
 // -------------------------------------------------------
 // Put all your custom global CSS styles below this line
 // -------------------------------------------------------
-```
-
-### use the holy-grid starter
-```html
-<div class="holy-grid">
-  <header></header>
-  <main></main>
-  <footer></footer>
-</div>
 ```
 
 ### test some standard HTML and variables 

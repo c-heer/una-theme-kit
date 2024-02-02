@@ -1,3 +1,10 @@
+// Firefox Browsers
+* {
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  scrollbar-width: thin;
+}
+
+// Webkit Browsers
 ::-webkit-scrollbar {
   width: 1rem;
   height: 1rem;
