@@ -38,33 +38,6 @@ ul {
   padding: 0 0 0 1rem;
 }
 
-.holy-grid {
-  display: grid;
-  --center-width: min(calc(100% - (var(--space-2) * 2)), var(--min-width));
-  grid-template-columns: auto var(--center-width) auto;
-  grid-template-rows: auto 1fr auto;
-  gap: 0;
-  grid-auto-flow: row;
-  grid-template-areas: "left header right" "left main right" "left footer right";
-  width: 100%;
-  min-height: 100%;
-}
-.holy-grid header {
-  grid-area: header;
-}
-.holy-grid header::before {
-  grid-area: left;
-}
-.holy-grid main {
-  grid-area: main;
-}
-.holy-grid footer {
-  grid-area: footer;
-}
-.holy-grid footer::after {
-  grid-area: right;
-}
-
 body {
   font-family: var(--family-1);
   font-size: var(--font-size-2);
@@ -95,10 +68,6 @@ a:hover {
 
 p {
   line-height: var(--line-height-2);
-}
-
-* {
-  scrollbar-width: thin;
 }
 
 ::-webkit-scrollbar {
