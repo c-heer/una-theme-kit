@@ -10,6 +10,11 @@ It ships styles for Typography, Forms, Animations and includes a Reset.
 To keep things simple most Variables are named after the property-value name.
 Once you get used to it, it's as easy as 1,2,3. Enjoy!
 
+### Version 2.0.0
+- remove all errors between browsers
+- remove compiled css 
+- concentrate on scss
+
 ### Version 1.0.12
 - remove basic grid-layout
 - add scrollbar styles for Firefox back again
