@@ -94,11 +94,6 @@ code::-webkit-scrollbar-thumb {
   border: 0.45rem solid var(--background-1);
 }
 
-* {
-  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
-  scrollbar-width: thin;
-}
-
 :root {
   --transition-fast: .3s ease-in-out;
   --transition-slow: .6s ease-in-out;
