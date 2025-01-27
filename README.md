@@ -10,6 +10,9 @@ It ships styles for Typography, Forms, Animations and includes a Reset.
 To keep things simple most Variables are named after the property-value name.
 Once you get used to it, it's as easy as 1,2,3. Enjoy!
 
+### Version 2.0.1
+- use @use instead of @import (Sass Error)
+
 ### Version 2.0.0
 - remove all errors between browsers
 - remove compiled css 
