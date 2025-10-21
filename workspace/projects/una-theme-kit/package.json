@@ -1,0 +1,41 @@
+{
+  "name": "@heer.dev/una-theme-kit",
+  "version": "3.1.0",
+  "description": "Pure CSS theme kit with CSS variables, fluid typography, and zero dependencies. Maximum power, tons of glitter, made for unicorns.",
+  "main": "css/base.css",
+  "style": "css/base.css",
+  "files": [
+    "css/**/*.css",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "css",
+    "css-variables",
+    "theme",
+    "theme-kit",
+    "design-system",
+    "dark-mode",
+    "light-mode",
+    "fluid-typography",
+    "css-framework",
+    "no-build",
+    "zero-dependencies"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/c-heer/una-theme-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/c-heer/una-theme-kit/issues"
+  },
+  "homepage": "https://github.com/c-heer/una-theme-kit#readme",
+  "author": {
+    "name": "heer.dev",
+    "url": "https://heer.dev"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  }
+}
