@@ -1,13 +1,15 @@
 import { Component, OnInit, PLATFORM_ID, Inject } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { CodeBlockComponent } from '../../shared/components/code-block.component';
 
 @Component({
   selector: 'app-getting-started',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, CodeBlockComponent],
   templateUrl: './getting-started.component.html',
-  styleUrl: './getting-started.component.scss'
+  styleUrl: './getting-started.component.scss',
+  preserveWhitespaces: true
 })
 export class GettingStartedComponent implements OnInit {
   
@@ -21,8 +23,11 @@ export class GettingStartedComponent implements OnInit {
         import('prismjs/components/prism-css').then(() => {
           // @ts-ignore
           import('prismjs/components/prism-bash').then(() => {
-            // Highlight all code blocks
-            (window as any).Prism?.highlightAll();
+            // @ts-ignore
+            import('prismjs/components/prism-markup').then(() => {
+              // Highlight all code blocks
+              (window as any).Prism?.highlightAll();
+            });
           });
         });
       });

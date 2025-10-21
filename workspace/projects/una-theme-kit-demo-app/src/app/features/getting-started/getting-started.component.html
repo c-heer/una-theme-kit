@@ -9,7 +9,7 @@
     <div class="step-content">
       <h2>Install</h2>
       <p>Add UNA Theme Kit to your project via npm:</p>
-      <pre><code class="language-bash">npm install &#64;heer.dev/una-theme-kit</code></pre>
+      <app-code-block language="bash">npm install &#64;heer.dev/una-theme-kit</app-code-block>
     </div>
   </section>
 
@@ -17,9 +17,16 @@
     <div class="step-number">2</div>
     <div class="step-content">
       <h2>Import Base CSS</h2>
-      <p>Import the base styles in your main CSS file:</p>
-      <pre><code class="language-css">/* In your styles.css */
-&#64;import 'una-theme-kit/css/base.css';</code></pre>
+      <p><strong>Using a bundler (Webpack, Vite, Parcel, etc.):</strong></p>
+      <app-code-block language="css">/* In your main CSS file (e.g., styles.css) */
+&#64;import 'una-theme-kit/css/base.css';</app-code-block>
+
+      <p><strong>Using plain HTML:</strong></p>
+      <app-code-block language="html">&lt;!-- From node_modules (if you have a dev server) --&gt;
+&lt;link rel="stylesheet" href="/node_modules/una-theme-kit/css/base.css"&gt;
+
+&lt;!-- Or from CDN (easiest for static sites) --&gt;
+&lt;link rel="stylesheet" href="https://unpkg.com/una-theme-kit/css/base.css"&gt;</app-code-block>
     </div>
   </section>
 
@@ -28,34 +35,107 @@
     <div class="step-content">
       <h2>Add Your Variables</h2>
       <p>Copy the CSS variables from <code>starter.css</code> into your stylesheet and customize them:</p>
-      <pre><code class="language-css">:root {{ '{' }}
+      <app-code-block language="css">:root {{ '{' }}
   /* Layout */
   --max-width: 1280px;
-  
+
   /* Typography */
-  --family-1: system-ui, sans-serif;
-  --font-size-0: clamp(0.75rem, 0.4vw + 0.65rem, 0.9rem);
-  --font-size-1: clamp(0.875rem, 0.45vw + 0.75rem, 1rem);
-  --font-size-2: clamp(1rem, 0.5vw + 0.85rem, 1.125rem);
-  
+  --family-1: 'Helvetica', sans-serif;
+  --family-2: Georgia, 'Times New Roman', serif;
+
+  /* Font sizes */
+  --font-size-0: 0.75rem;   /* 12px */
+  --font-size-1: 0.875rem;  /* 14px */
+  --font-size-2: 1rem;      /* 16px */
+  --font-size-3: 1.5rem;    /* 24px */
+  --font-size-4: 3rem;      /* 48px */
+
+  /* Line heights */
+  --line-height-0: 1;
+  --line-height-1: 1.2;
+  --line-height-2: 1.6;
+  --line-height-3: 2;
+
+  /* Component heights */
+  --height-1: 40px;
+  --height-2: 48px;
+  --height-3: 64px;
+
   /* Spacing */
   --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 2rem;
-  
-  /* ... and more */
+  --space-around: var(--space-3) var(--space-1);
+
+  /* Transitions & Animations */
+  --transition-fast: 0.2s ease-in-out;
+  --transition-slow: 0.4s ease-in-out;
+  --animation-fast: 0.3s ease-in-out forwards;
+  --animation-slow: 0.6s ease-in-out forwards;
+  --animation-fast-infinite: 0.3s ease-in-out 0s infinite;
+  --animation-slow-infinite: 0.6s ease-in-out 0s infinite;
+
+  /* Optional */
+  --border-radius: 0;
 {{ '}' }}
 
-body {{ '{' }}
-  /* Light theme colors */
+/* Light theme */
+.light {{ '{' }}
   --color-1: hsl(210, 100%, 50%);
+  --color-2: hsl(280, 70%, 55%);
+  --color-3: hsl(160, 70%, 45%);
+  --on-color: hsl(0, 0%, 100%);
+
   --background-1: hsl(0, 0%, 96%);
   --background-2: hsl(0, 0%, 100%);
+  --background-3: hsl(0, 0%, 98%);
+  --background-4: hsl(0, 0%, 100%);
+
   --on-background: hsl(0, 0%, 15%);
+  --on-background-light: hsl(0, 0%, 45%);
+  --on-background-dark: hsl(0, 0%, 5%);
+  --on-background-inverted: hsl(0, 0%, 95%);
+
   --border-1: hsl(0, 0%, 88%);
-{{ '}' }}</code></pre>
+  --border-2: hsl(0, 0%, 75%);
+
+  --error: hsl(0, 70%, 50%);
+  --warning: hsl(40, 90%, 50%);
+  --success: hsl(140, 60%, 45%);
+
+  --scrollbar-track: hsl(0, 0%, 95%);
+  --scrollbar-thumb: hsl(0, 0%, 70%);
+{{ '}' }}
+
+/* Dark theme */
+.dark {{ '{' }}
+  --color-1: hsl(210, 100%, 60%);
+  --color-2: hsl(280, 70%, 65%);
+  --color-3: hsl(160, 70%, 55%);
+  --on-color: hsl(0, 0%, 10%);
+
+  --background-1: hsl(0, 0%, 10%);
+  --background-2: hsl(0, 0%, 14%);
+  --background-3: hsl(0, 0%, 18%);
+  --background-4: hsl(0, 0%, 8%);
+
+  --on-background: hsl(0, 0%, 90%);
+  --on-background-light: hsl(0, 0%, 65%);
+  --on-background-dark: hsl(0, 0%, 98%);
+  --on-background-inverted: hsl(0, 0%, 15%);
+
+  --border-1: hsl(0, 0%, 25%);
+  --border-2: hsl(0, 0%, 40%);
+
+  --error: hsl(0, 70%, 60%);
+  --warning: hsl(40, 90%, 60%);
+  --success: hsl(140, 60%, 55%);
+
+  --scrollbar-track: hsl(0, 0%, 12%);
+  --scrollbar-thumb: hsl(0, 0%, 35%);
+{{ '}' }}</app-code-block>
       <p class="helper-text">
-        <strong>Tip:</strong> See all available variables on the <a routerLink="/variables">Variables page</a>
+        <strong>Tip:</strong> See all available variables explained on the <a routerLink="/variables">Variables page</a>
       </p>
     </div>
   </section>
@@ -65,13 +145,13 @@ body {{ '{' }}
     <div class="step-content">
       <h2>Start Using</h2>
       <p>Use the CSS variables in your components:</p>
-      <pre><code class="language-css">.my-component {{ '{' }}
+      <app-code-block language="css">.my-component {{ '{' }}
   background: var(--background-2);
   color: var(--on-background);
   padding: var(--space-2);
   border: 1px solid var(--border-1);
   border-radius: 8px;
-{{ '}' }}</code></pre>
+{{ '}' }}</app-code-block>
     </div>
   </section>
 

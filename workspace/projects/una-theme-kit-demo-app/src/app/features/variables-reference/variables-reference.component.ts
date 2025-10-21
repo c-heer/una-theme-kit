@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CodeBlockComponent } from '../../shared/components/code-block.component';
 
 interface Variable {
   name: string;
@@ -17,7 +18,7 @@ interface VariableCategory {
 @Component({
   selector: 'app-variables-reference',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, CodeBlockComponent],
   templateUrl: './variables-reference.component.html',
   styleUrl: './variables-reference.component.scss'
 })
@@ -53,11 +54,11 @@ export class VariablesReferenceComponent {
       variables: [
         { name: '--family-1', value: 'System font stack', description: 'Primary sans-serif font', type: 'text' },
         { name: '--family-2', value: 'Georgia, serif', description: 'Secondary serif font', type: 'text' },
-        { name: '--font-size-0', value: 'clamp(0.75rem, 0.4vw + 0.65rem, 0.9rem)', description: 'Extra small text (caption, small labels)', type: 'size' },
-        { name: '--font-size-1', value: 'clamp(0.875rem, 0.45vw + 0.75rem, 1rem)', description: 'Small text (metadata, secondary info)', type: 'size' },
-        { name: '--font-size-2', value: 'clamp(1rem, 0.5vw + 0.85rem, 1.125rem)', description: 'Body text (default)', type: 'size' },
-        { name: '--font-size-3', value: 'clamp(1.25rem, 0.7vw + 1rem, 1.75rem)', description: 'Headings (h2-h6)', type: 'size' },
-        { name: '--font-size-4', value: 'clamp(2rem, 4vw + 1rem, 4rem)', description: 'Hero text (h1, display)', type: 'size' },
+        { name: '--font-size-0', value: '0.75rem', description: 'Extra small text - 12px (caption, small labels)', type: 'size' },
+        { name: '--font-size-1', value: '0.875rem', description: 'Small text - 14px (metadata, secondary info)', type: 'size' },
+        { name: '--font-size-2', value: '1rem', description: 'Body text - 16px (default)', type: 'size' },
+        { name: '--font-size-3', value: '1.5rem', description: 'Headings - 24px (h2-h6)', type: 'size' },
+        { name: '--font-size-4', value: '3rem', description: 'Hero text - 48px (h1, display)', type: 'size' },
         { name: '--line-height-0', value: '1', description: 'Tight line height for headings', type: 'size' },
         { name: '--line-height-1', value: '1.2', description: 'Compact line height', type: 'size' },
         { name: '--line-height-2', value: '1.6', description: 'Comfortable reading (default)', type: 'size' },
