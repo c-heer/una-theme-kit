@@ -1,0 +1,127 @@
+<div class="getting-started-page">
+  <header class="hero">
+    <h1>Getting Started</h1>
+    <p class="lead">A minimal CSS theme kit with variables, fluid typography, and zero dependencies.</p>
+  </header>
+
+  <section class="install-section">
+    <div class="step-number">1</div>
+    <div class="step-content">
+      <h2>Install</h2>
+      <p>Add UNA Theme Kit to your project via npm:</p>
+      <pre><code class="language-bash">npm install &#64;heer.dev/una-theme-kit</code></pre>
+    </div>
+  </section>
+
+  <section class="setup-section">
+    <div class="step-number">2</div>
+    <div class="step-content">
+      <h2>Import Base CSS</h2>
+      <p>Import the base styles in your main CSS file:</p>
+      <pre><code class="language-css">/* In your styles.css */
+&#64;import 'una-theme-kit/css/base.css';</code></pre>
+    </div>
+  </section>
+
+  <section class="variables-section">
+    <div class="step-number">3</div>
+    <div class="step-content">
+      <h2>Add Your Variables</h2>
+      <p>Copy the CSS variables from <code>starter.css</code> into your stylesheet and customize them:</p>
+      <pre><code class="language-css">:root {{ '{' }}
+  /* Layout */
+  --max-width: 1280px;
+  
+  /* Typography */
+  --family-1: system-ui, sans-serif;
+  --font-size-0: clamp(0.75rem, 0.4vw + 0.65rem, 0.9rem);
+  --font-size-1: clamp(0.875rem, 0.45vw + 0.75rem, 1rem);
+  --font-size-2: clamp(1rem, 0.5vw + 0.85rem, 1.125rem);
+  
+  /* Spacing */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 2rem;
+  
+  /* ... and more */
+{{ '}' }}
+
+body {{ '{' }}
+  /* Light theme colors */
+  --color-1: hsl(210, 100%, 50%);
+  --background-1: hsl(0, 0%, 96%);
+  --background-2: hsl(0, 0%, 100%);
+  --on-background: hsl(0, 0%, 15%);
+  --border-1: hsl(0, 0%, 88%);
+{{ '}' }}</code></pre>
+      <p class="helper-text">
+        <strong>Tip:</strong> See all available variables on the <a routerLink="/variables">Variables page</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="usage-section">
+    <div class="step-number">4</div>
+    <div class="step-content">
+      <h2>Start Using</h2>
+      <p>Use the CSS variables in your components:</p>
+      <pre><code class="language-css">.my-component {{ '{' }}
+  background: var(--background-2);
+  color: var(--on-background);
+  padding: var(--space-2);
+  border: 1px solid var(--border-1);
+  border-radius: 8px;
+{{ '}' }}</code></pre>
+    </div>
+  </section>
+
+  <section class="features-grid">
+    <h2>What's Included</h2>
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">🎨</div>
+        <h3>CSS Variables</h3>
+        <p>Fully customizable through CSS custom properties</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📏</div>
+        <h3>Fluid Typography</h3>
+        <p>Responsive font sizes that scale with viewport</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🌓</div>
+        <h3>Theme Support</h3>
+        <p>Built-in light and dark theme variables</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📦</div>
+        <h3>Zero Dependencies</h3>
+        <p>Pure CSS, no JavaScript required</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">⚡</div>
+        <h3>Lightweight</h3>
+        <p>Under 10KB, loads instantly</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">♿</div>
+        <h3>Accessible</h3>
+        <p>Respects motion preferences and proper contrast</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="next-steps">
+    <h2>Next Steps</h2>
+    <div class="steps-list">
+      <a routerLink="/variables" class="step-card">
+        <h3>Explore Variables →</h3>
+        <p>See all available CSS variables and their purposes</p>
+      </a>
+      <a href="https://github.com/c-heer/una-theme-kit" target="_blank" class="step-card">
+        <h3>View on GitHub →</h3>
+        <p>Check out the source code and examples</p>
+      </a>
+    </div>
+  </section>
+</div>

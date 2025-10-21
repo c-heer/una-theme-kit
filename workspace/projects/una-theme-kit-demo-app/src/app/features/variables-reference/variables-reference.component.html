@@ -1,0 +1,54 @@
+<div class="variables-page">
+  <header class="page-header">
+    <h1>CSS Variables</h1>
+    <p class="subtitle">
+      All available CSS custom properties. Click any variable to copy it to your clipboard.
+    </p>
+  </header>
+
+  <div class="variables-content">
+    @for (category of categories; track category.title) {
+      <section class="variable-section">
+        <div class="section-header">
+          <h2>{{ category.title }}</h2>
+          <p>{{ category.description }}</p>
+        </div>
+
+        <div class="variables-list">
+          @for (variable of category.variables; track variable.name) {
+            <button 
+              class="variable-item"
+              (click)="copyVariable(variable.name)"
+              [class.copied]="copiedVariable() === variable.name"
+            >
+              <div class="variable-info">
+                <code class="variable-name">{{ variable.name }}</code>
+                <span class="variable-description">{{ variable.description }}</span>
+              </div>
+              
+              @if (isColor(variable.type)) {
+                <div class="color-preview" [style.background-color]="'var(' + variable.name + ')'"></div>
+              }
+              
+              @if (copiedVariable() === variable.name) {
+                <span class="copy-badge">Copied!</span>
+              }
+            </button>
+          }
+        </div>
+      </section>
+    }
+  </div>
+
+  <section class="usage-section">
+    <h2>Usage</h2>
+    <p>Use CSS variables in your stylesheets:</p>
+
+    <pre><code>.my-component {{ '{' }}
+  background: var(--background-2);
+  color: var(--on-background);
+  padding: var(--space-2);
+  border: 1px solid var(--border-1);
+{{ '}' }}</code></pre>
+  </section>
+</div>

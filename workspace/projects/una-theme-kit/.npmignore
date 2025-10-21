@@ -1,0 +1,7 @@
+# Development files
+.DS_Store
+*.log
+node_modules/
+
+# Keep only what's needed for the package
+# (css, README, LICENSE are included via package.json "files")

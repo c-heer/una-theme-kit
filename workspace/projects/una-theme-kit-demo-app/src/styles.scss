@@ -1,0 +1,123 @@
+/* UNA Theme Kit - Documentation Site Styles */
+
+/* Import UNA CSS base from the package */
+@import '../../una-theme-kit/css/base.css';
+
+/* Import Prism.js theme */
+@import 'prismjs/themes/prism-tomorrow.css';
+
+/* Your CSS variables (copied from starter.css and customized) */
+:root {
+  /* Layout */
+  --max-width: 1280px;
+  
+  /* Typography */
+  --family-1: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  --family-2: Georgia, 'Times New Roman', serif;
+  
+  /* Fluid font sizes */
+  --font-size-0: clamp(0.75rem, 0.4vw + 0.65rem, 0.9rem);
+  --font-size-1: clamp(0.875rem, 0.45vw + 0.75rem, 1rem);
+  --font-size-2: clamp(1rem, 0.5vw + 0.85rem, 1.125rem);
+  --font-size-3: clamp(1.25rem, 0.7vw + 1rem, 1.75rem);
+  --font-size-4: clamp(2rem, 4vw + 1rem, 4rem);
+  
+  /* Line heights */
+  --line-height-0: 1;
+  --line-height-1: 1.2;
+  --line-height-2: 1.6;
+  --line-height-3: 2;
+  
+  /* Component heights */
+  --height-1: 40px;
+  --height-2: 48px;
+  --height-3: 64px;
+  
+  /* Spacing */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 2rem;
+  --space-around: var(--space-3) var(--space-1);
+  
+  /* Transitions & Animations */
+  --transition-fast: 0.2s ease-in-out;
+  --transition-slow: 0.4s ease-in-out;
+  --animation-fast: 0.3s ease-in-out forwards;
+  --animation-slow: 0.6s ease-in-out forwards;
+  --animation-fast-infinite: 0.3s ease-in-out 0s infinite;
+  --animation-slow-infinite: 0.6s ease-in-out 0s infinite;
+  
+  /* Optional */
+  --border-radius: 0;
+}
+
+/* Light theme */
+body {
+  --color-1: hsl(210, 100%, 50%);
+  --color-2: hsl(280, 70%, 55%);
+  --color-3: hsl(160, 70%, 45%);
+  --on-color: hsl(0, 0%, 100%);
+  
+  --background-1: hsl(0, 0%, 96%);
+  --background-2: hsl(0, 0%, 100%);
+  --background-3: hsl(0, 0%, 98%);
+  --background-4: hsl(0, 0%, 100%);
+  
+  --on-background: hsl(0, 0%, 15%);
+  --on-background-light: hsl(0, 0%, 45%);
+  --on-background-dark: hsl(0, 0%, 5%);
+  --on-background-inverted: hsl(0, 0%, 95%);
+  
+  --border-1: hsl(0, 0%, 88%);
+  --border-2: hsl(0, 0%, 75%);
+  
+  --error: hsl(0, 70%, 50%);
+  --warning: hsl(40, 90%, 50%);
+  --success: hsl(140, 60%, 45%);
+  
+  --scrollbar-track: hsl(0, 0%, 95%);
+  --scrollbar-thumb: hsl(0, 0%, 70%);
+}
+
+/* Dark theme (optional - for future) */
+@media (prefers-color-scheme: dark) {
+  body {
+    --color-1: hsl(210, 100%, 60%);
+    --color-2: hsl(280, 70%, 65%);
+    --color-3: hsl(160, 70%, 55%);
+    --on-color: hsl(0, 0%, 10%);
+    
+    --background-1: hsl(0, 0%, 10%);
+    --background-2: hsl(0, 0%, 14%);
+    --background-3: hsl(0, 0%, 18%);
+    --background-4: hsl(0, 0%, 8%);
+    
+    --on-background: hsl(0, 0%, 90%);
+    --on-background-light: hsl(0, 0%, 65%);
+    --on-background-dark: hsl(0, 0%, 98%);
+    --on-background-inverted: hsl(0, 0%, 15%);
+    
+    --border-1: hsl(0, 0%, 25%);
+    --border-2: hsl(0, 0%, 40%);
+    
+    --error: hsl(0, 70%, 60%);
+    --warning: hsl(40, 90%, 60%);
+    --success: hsl(140, 60%, 55%);
+    
+    --scrollbar-track: hsl(0, 0%, 12%);
+    --scrollbar-thumb: hsl(0, 0%, 35%);
+  }
+}
+
+/* Prism.js customization to match UNA theme */
+pre[class*="language-"] {
+  background: var(--background-2) !important;
+  border: 1px solid var(--border-1) !important;
+  border-radius: 6px !important;
+  margin: var(--space-2) 0 !important;
+}
+
+code[class*="language-"] {
+  font-size: var(--font-size-1) !important;
+  line-height: var(--line-height-2) !important;
+}

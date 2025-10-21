@@ -1,0 +1,15 @@
+/* View Transitions API support */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.2s;
+}
+
+/* Utility: Hide elements */
+.hidden {
+  display: none;
+}
+
+/* Utility: Prevent body scroll (useful for modals, mobile menus) */
+body.no-scroll {
+  overflow: hidden;
+}

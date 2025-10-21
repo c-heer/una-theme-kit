@@ -1,0 +1,216 @@
+/* Labels */
+label {
+  font-size: var(--font-size-2);
+  color: var(--on-background-light);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* Placeholder styles */
+::placeholder {
+  color: var(--on-background-light);
+  opacity: 0.7;
+}
+
+:focus::placeholder {
+  opacity: 0.3;
+}
+
+/* Base input styles (excluding buttons, radio, checkbox, file) */
+input:not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="radio"]):not([type="checkbox"]):not([type="file"]),
+select,
+textarea {
+  appearance: none;
+  width: 100%;
+  padding: 0 0.75rem;
+  font-size: var(--font-size-2);
+  color: var(--on-background);
+  background: var(--background-3);
+  border: 1px solid var(--border-1);
+  border-radius: 0;
+  outline: none;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+/* Text inputs and select height */
+input:not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="radio"]):not([type="checkbox"]):not([type="file"]),
+select {
+  height: var(--height-1);
+  line-height: var(--height-1);
+}
+
+/* Textarea specific */
+textarea {
+  min-height: calc(var(--height-1) * 2.5);
+  line-height: var(--line-height-2);
+  padding: 0.5rem 0.75rem;
+  resize: vertical;
+}
+
+/* Focus states */
+input:not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="radio"]):not([type="checkbox"]):not([type="file"]):focus,
+select:focus,
+textarea:focus {
+  border-color: var(--color-1);
+  background: var(--background-2);
+}
+
+/* Focus visible for keyboard navigation */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-1);
+  outline-offset: 2px;
+}
+
+/* Remove validation styling */
+input:required,
+input:invalid,
+textarea:required,
+textarea:invalid {
+  box-shadow: none;
+}
+
+/* Number input width */
+input[type="number"] {
+  width: auto;
+  min-width: 100px;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+  appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 1px solid var(--border-1);
+  background: var(--background-3);
+  cursor: pointer;
+  position: relative;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+input[type="checkbox"]:checked {
+  background: var(--color-1);
+  border-color: var(--color-1);
+}
+
+input[type="checkbox"]:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--on-color);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+input[type="checkbox"]:focus-visible {
+  outline: 2px solid var(--color-1);
+  outline-offset: 2px;
+}
+
+input[type="checkbox"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Radio */
+input[type="radio"] {
+  appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 1px solid var(--border-1);
+  border-radius: 50%;
+  background: var(--background-3);
+  cursor: pointer;
+  position: relative;
+  transition: border-color var(--transition-fast);
+}
+
+input[type="radio"]:checked {
+  border-color: var(--color-1);
+}
+
+input[type="radio"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--color-1);
+}
+
+input[type="radio"]:focus-visible {
+  outline: 2px solid var(--color-1);
+  outline-offset: 2px;
+}
+
+input[type="radio"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* File input */
+input[type="file"] {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+  padding: 0 1rem;
+  height: calc(var(--height-1) - 1rem);
+  background: var(--background-2);
+  color: var(--on-background);
+  border: 1px solid var(--border-1);
+  border-radius: 0;
+  cursor: pointer;
+  margin-right: 0.75rem;
+  transition: background-color var(--transition-fast);
+}
+
+input[type="file"]::file-selector-button:hover {
+  background: var(--background-3);
+}
+
+/* Select custom arrow */
+select {
+  padding-right: 2.5rem;
+  background-image: 
+    linear-gradient(45deg, transparent 50%, var(--on-background) 50%),
+    linear-gradient(135deg, var(--on-background) 50%, transparent 50%);
+  background-position:
+    right 1rem center,
+    right 0.6rem center;
+  background-size: 0.4rem 0.4rem;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+select option {
+  background: var(--background-1);
+  color: var(--on-background);
+}
+
+/* Hide empty placeholder option */
+option[value=""][disabled] {
+  display: none;
+}
+
+/* Firefox select focus fix */
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 var(--on-background);
+}
+
+/* Disabled state for all form elements */
+input:disabled,
+select:disabled,
+textarea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: var(--background-1);
+}
